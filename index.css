@@ -1,0 +1,81 @@
+body {
+  background: #222;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#scene {
+  width: 300px;
+  height: 300px;
+  margin: 100px auto;
+  perspective: 900px;
+}
+
+#cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(45deg);
+  transition: transform 0.5s ease;
+  cursor: grab;
+}
+
+.face {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 10px #000;
+  transform-style: preserve-3d;
+}
+
+#front {
+  transform: translateZ(150px);
+}
+#back {
+  transform: rotateY(180deg) translateZ(150px);
+}
+#right {
+  transform: rotateY(90deg) translateZ(150px);
+}
+#left {
+  transform: rotateY(-90deg) translateZ(150px);
+}
+#top {
+  transform: rotateX(90deg) translateZ(150px);
+}
+#bottom {
+  transform: rotateX(-90deg) translateZ(150px);
+}
+
+.square {
+  width: 98px;
+  height: 98px;
+  border: 1px solid black;
+  box-shadow: inset 0 0 3px #000;
+}
+
+button {
+  margin: 6px;
+  padding: 10px 10px;
+}
+
+#info {
+  margin-top: 10px;
+}
+
+pre {
+  background: #333;
+  color: rgb(225, 235, 225);
+  text-align: left;
+  padding: 10px;
+  max-width: 500px;
+  margin: 10px auto;
+  white-space: pre-wrap;
+  font-size: 20px;
+}

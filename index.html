@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3D Rubik's Cube</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<h1 >Rubik's Cube</h1>
+<div id="scene">
+  <div id="cube">
+    <div class="face" id="front"></div>
+    <div class="face" id="back"></div>
+    <div class="face" id="right"></div>
+    <div class="face" id="left"></div>
+    <div class="face" id="top"></div>
+    <div class="face" id="bottom"></div>
+  </div>
+</div>
+<div>
+  <button onclick="scrambleCube()">Scramble</button>
+  <button onclick="solveCubeStepByStep()">Solve Step-by-Step</button>
+  <button onclick="resetCube()">Reset</button>
+</div>
+<div style="margin-top:20px;">
+  <button onclick="manualRotate('U', true)">U Clockwise</button>
+  <button onclick="manualRotate('U', false)">U Counter</button>
+  <button onclick="manualRotate('D', true)">D Clockwise</button>
+  <button onclick="manualRotate('D', false)">D Counter</button>
+  <button onclick="manualRotate('L', true)">L Clockwise</button>
+  <button onclick="manualRotate('L', false)">L Counter</button>
+  <button onclick="manualRotate('R', true)">R Clockwise</button>
+  <button onclick="manualRotate('R', false)">R Counter</button>
+  <button onclick="manualRotate('F', true)">F Clockwise</button>
+  <button onclick="manualRotate('F', false)">F Counter</button>
+  <button onclick="manualRotate('B', true)">B Clockwise</button>
+  <button onclick="manualRotate('B', false)">B Counter</button>
+</div>
+<div id="info">
+  <p>Moves: <span id="moveCounter">0</span> | Time: <span id="timer">0</span> sec</p>
+</div>
+<h3>Manual Solve Steps:</h3>
+<pre id="manualSteps">(Scramble first to see steps)</pre>
+<script src="index.js"></script>
+</body>
+</html>
